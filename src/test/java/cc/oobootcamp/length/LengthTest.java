@@ -20,4 +20,11 @@ class LengthTest {
         assertThat(length1.compare(length2)).isNegative();
     }
 
+    @Test
+    void should_return_positive_when_compare_given_second_length_smaller_amount() {
+        Length length1 = new Length(7);
+        Length length2 = new Length(5);
+        assertThat(length1.compare(length2)).isPositive();
+    }
+
 }
