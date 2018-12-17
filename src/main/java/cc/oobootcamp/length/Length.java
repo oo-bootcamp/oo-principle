@@ -2,11 +2,13 @@ package cc.oobootcamp.length;
 
 public class Length {
     private final int amount;
+    private String unit;
 
-    public Length(int amount) {
+    public Length(int amount, String unit) {
         if (amount <= 0) {
             throw new IllegalArgumentException();
         }
+        this.unit = unit;
         this.amount = amount;
     }
 
