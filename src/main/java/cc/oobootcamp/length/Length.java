@@ -13,6 +13,9 @@ public class Length {
     }
 
     public int compare(Length target) {
+        if (!unit.contentEquals(target.unit)) {
+            throw new IllegalStateException();
+        }
         if (amount == target.amount) {
             return 0;
         }
