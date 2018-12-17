@@ -3,6 +3,7 @@ package cc.oobootcamp.length;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class LengthTest {
 
@@ -25,6 +26,12 @@ class LengthTest {
         Length length1 = new Length(7);
         Length length2 = new Length(5);
         assertThat(length1.compare(length2)).isPositive();
+    }
+
+    @Test
+    void should_throw_exception_when_length_smaller_amount_bellow_zero() {
+        assertThrows(IllegalArgumentException.class, () -> new Length(0));
+        assertThrows(IllegalArgumentException.class, () -> new Length(-1));
     }
 
 }

@@ -4,6 +4,9 @@ public class Length {
     private final int amount;
 
     public Length(int amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException();
+        }
         this.amount = amount;
     }
 
