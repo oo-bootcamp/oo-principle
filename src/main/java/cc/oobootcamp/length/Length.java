@@ -2,9 +2,9 @@ package cc.oobootcamp.length;
 
 public class Length {
     private final int amount;
-    private String unit;
+    private Unit unit;
 
-    public Length(int amount, String unit) {
+    public Length(int amount, Unit unit) {
         if (amount <= 0) {
             throw new IllegalArgumentException();
         }
@@ -13,7 +13,7 @@ public class Length {
     }
 
     public int compare(Length target) {
-        if (!unit.contentEquals(target.unit)) {
+        if (!unit.equals(target.unit)) {
             throw new IllegalStateException();
         }
         if (amount == target.amount) {
