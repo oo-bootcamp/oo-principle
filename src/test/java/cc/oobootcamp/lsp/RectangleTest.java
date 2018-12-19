@@ -31,8 +31,8 @@ class RectangleTest {
     @ParameterizedTest
     @MethodSource("widthHeightProvider")
     void should_return_area_when_calculate_given_width_height_valid(int width, int height) {
-        Rectangle rectangle = new Rectangle(width, height);
-        assertThat(rectangle.calculateArea()).isEqualTo(width * height);
+        Quads quads = new Rectangle(width, height);
+        assertThat(quads.calculateArea()).isEqualTo(width * height);
     }
 
     @Test
@@ -46,8 +46,8 @@ class RectangleTest {
     @ParameterizedTest
     @MethodSource("sideProvider")
     void should_return_area_when_calculate_given_side_valid(int side) {
-        Rectangle rectangle = new Square(side);
-        assertThat(rectangle.calculateArea()).isEqualTo(side * side);
+        Quads quads = new Square(side);
+        assertThat(quads.calculateArea()).isEqualTo(side * side);
     }
 
     @Test
@@ -58,11 +58,11 @@ class RectangleTest {
 
     @Test
     void should_width_equals_height_plus_1() {
-        Rectangle rectangle = new Square(2);
-        while (rectangle.getWidth() <= rectangle.getHeight()) {
-            rectangle.setWidth(rectangle.getWidth() + 1);
+        Quads quads = new Rectangle(1, 2);
+        while (quads.getWidth() <= quads.getHeight()) {
+            quads.setWidth(quads.getWidth() + 1);
         }
-        assertThat(rectangle.getWidth()).isEqualTo(rectangle.getHeight() + 1);
+        assertThat(quads.getWidth()).isEqualTo(quads.getHeight() + 1);
     }
 
 }
