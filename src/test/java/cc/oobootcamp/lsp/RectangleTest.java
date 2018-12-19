@@ -56,4 +56,13 @@ class RectangleTest {
         assertThrows(IllegalArgumentException.class, () -> new Square(0));
     }
 
+    @Test
+    void should_width_equals_height_plus_1() {
+        Rectangle rectangle = new Rectangle(1, 4);
+        while (rectangle.getWidth() <= rectangle.getHeight()) {
+            rectangle.setWidth(rectangle.getWidth() + 1);
+        }
+        assertThat(rectangle.getWidth()).isEqualTo(rectangle.getHeight() + 1);
+    }
+
 }
