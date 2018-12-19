@@ -5,6 +5,7 @@ public class Square extends Quads {
         super(side, side);
     }
 
+    @Override
     public void setWidth(int width) {
         this.width = width;
         this.height = width;
