@@ -1,4 +1,4 @@
-package cc.oobootcamp.lsp;
+package cc.oobootcamp.rectangle;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,4 +1,4 @@
-package cc.oobootcamp.lsp;
+package cc.oobootcamp.rectangle;
 
 public abstract class Quads {
     protected int width;

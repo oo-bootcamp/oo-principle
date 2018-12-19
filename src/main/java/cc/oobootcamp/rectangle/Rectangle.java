@@ -1,19 +1,18 @@
-package cc.oobootcamp.lsp;
+package cc.oobootcamp.rectangle;
 
-public class Square extends Quads {
-    public Square(int side) {
-        super(side, side);
+public class Rectangle extends Quads {
+    public Rectangle(int width, int height) {
+        super(width, height);
     }
 
     @Override
     public void setWidth(int width) {
         this.width = width;
-        this.height = width;
     }
 
     @Override
     public void setHeight(int height) {
-        this.width = height;
         this.height = height;
     }
+
 }

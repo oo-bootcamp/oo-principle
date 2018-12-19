@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class LengthTest {
-
     @Test
     void should_return_0_when_compare_given_two_length_with_same_amount_and_same_unit() {
         Length length1 = new Length(5, Unit.CM);
