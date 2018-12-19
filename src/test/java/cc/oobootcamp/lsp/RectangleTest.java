@@ -58,7 +58,7 @@ class RectangleTest {
 
     @Test
     void should_width_equals_height_plus_1() {
-        Rectangle rectangle = new Rectangle(1, 4);
+        Rectangle rectangle = new Square(2);
         while (rectangle.getWidth() <= rectangle.getHeight()) {
             rectangle.setWidth(rectangle.getWidth() + 1);
         }
