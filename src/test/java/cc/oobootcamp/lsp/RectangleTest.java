@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class RectangleTest {
 
-    private static Stream<Arguments> widthHeightPair() {
+    private static Stream<Arguments> widthHeightProvider() {
         return Stream.of(
                 Arguments.of(1, 2),
                 Arguments.of(2, 4),
@@ -20,8 +20,16 @@ class RectangleTest {
         );
     }
 
+    private static Stream<Arguments> sideProvider() {
+        return Stream.of(
+                Arguments.of(1),
+                Arguments.of(2),
+                Arguments.of(4)
+        );
+    }
+
     @ParameterizedTest
-    @MethodSource("widthHeightPair")
+    @MethodSource("widthHeightProvider")
     void should_return_area_when_calculate_given_width_height_valid(int width, int height) {
         Rectangle rectangle = new Rectangle(width, height);
         assertThat(rectangle.calculateArea()).isEqualTo(width * height);
@@ -34,4 +42,18 @@ class RectangleTest {
         assertThrows(IllegalArgumentException.class, () -> new Rectangle(0, 0));
         assertThrows(IllegalArgumentException.class, () -> new Rectangle(-5, -5));
     }
+
+    @ParameterizedTest
+    @MethodSource("sideProvider")
+    void should_return_area_when_calculate_given_side_valid(int side) {
+        Rectangle rectangle = new Square(side);
+        assertThat(rectangle.calculateArea()).isEqualTo(side * side);
+    }
+
+    @Test
+    void should_throw_exception_when_construct_given_side_invalid() {
+        assertThrows(IllegalArgumentException.class, () -> new Square(-1));
+        assertThrows(IllegalArgumentException.class, () -> new Square(0));
+    }
+
 }
