@@ -10,9 +10,13 @@ class BirdTest {
         Flyable bird = new Bird(0, 0, 0);
         double originZ = bird.reportZ();
         double originY = bird.reportY();
+        double originX  = bird.reportX();
+
         bird.fly();
+        
         assertThat(bird.reportZ()).isEqualTo(originZ + 1);
         assertThat(bird.reportY()).isEqualTo(originY);
+        assertThat(bird.reportX()).isEqualTo(originX);
     }
 
     @Test
@@ -23,5 +27,6 @@ class BirdTest {
         penguin.fly();
         assertThat(penguin.reportX()).isEqualTo(originX + 1);
         assertThat(penguin.reportY()).isEqualTo(originY);
+        assertThat(penguin.reportZ()).isEqualTo(0);
     }
 }
