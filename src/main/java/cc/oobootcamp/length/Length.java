@@ -1,6 +1,6 @@
 package cc.oobootcamp.length;
 
-public class Length implements Comparable<Length>{
+public class Length implements Comparable<Length> {
     private final int amount;
     private Unit unit;
 
@@ -13,12 +13,10 @@ public class Length implements Comparable<Length>{
     }
 
     public int compareTo(Length target) {
-        double sourceLength = unit.toMeter(amount);
-        double targetLength = target.unit.toMeter(target.amount);
-
-        if (sourceLength == targetLength) {
+        double targetLength = target.unit.rateByTarget(this.unit) * target.amount;
+        if (amount == targetLength) {
             return 0;
         }
-        return sourceLength < targetLength ? -1 : 1;
+        return amount < targetLength ? -1 : 1;
     }
 }
