@@ -1,4 +1,4 @@
-package cc.oobootcamp.rectangle;
+package cc.oobootcamp.shape;
 
 public abstract class Quads {
     protected int width;

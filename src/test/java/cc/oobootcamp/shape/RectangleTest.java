@@ -1,4 +1,4 @@
-package cc.oobootcamp.rectangle;
+package cc.oobootcamp.shape;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
