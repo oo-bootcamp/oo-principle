@@ -1,19 +1,29 @@
 package cc.oobootcamp.flyable;
 
 public class Bird {
-    private double xIndex;
-    private double yIndex;
-    private double zIndex;
+    protected double x;
+    protected double y;
+    protected double z;
 
-    public double getHeight() {
-        return zIndex;
+    public Bird(double x, double y, double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
-    public void setHeight(double height) {
-        this.zIndex = height;
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getZ() {
+        return z;
     }
 
     public void fly() {
-        zIndex++;
+        z++;
     }
 }
