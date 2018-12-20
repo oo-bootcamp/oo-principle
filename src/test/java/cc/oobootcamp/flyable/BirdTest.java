@@ -7,17 +7,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 class BirdTest {
     @Test
     void should_bird_z_index_plus_1_meter_when_fly() {
-        Bird bird = new Bird(0, 0, 0);
-        double originZ = bird.getZ();
+        Flyable bird = new Bird(0, 0, 0);
+        double originZ = bird.reportZ();
+        double originY = bird.reportY();
         bird.fly();
-        assertThat(bird.getZ()).isEqualTo(originZ + 1);
+        assertThat(bird.reportZ()).isEqualTo(originZ + 1);
+        assertThat(bird.reportY()).isEqualTo(originY);
     }
 
     @Test
     void should_penguin_x_index_plus_1_meter_when_fly() {
-        Bird bird = new Penguin(0, 0, 0);
-        double originX = bird.getX();
-        bird.fly();
-        assertThat(bird.getX()).isEqualTo(originX + 1);
+        Flyable penguin = new Penguin(0, 0);
+        double originX = penguin.reportX();
+        double originY = penguin.reportY();
+        penguin.fly();
+        assertThat(penguin.reportX()).isEqualTo(originX + 1);
+        assertThat(penguin.reportY()).isEqualTo(originY);
     }
 }

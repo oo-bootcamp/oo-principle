@@ -1,29 +1,30 @@
 package cc.oobootcamp.flyable;
 
-public class Bird {
-    protected double x;
-    protected double y;
-    protected double z;
+public class Bird implements Flyable {
+    private double positionX;
+    private double positionY;
+    private double positionZ;
 
-    public Bird(double x, double y, double z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+    public Bird(double positionX, double positionY, double positionZ) {
+        this.positionX = positionX;
+        this.positionY = positionY;
+        this.positionZ = positionZ;
     }
 
-    public double getX() {
-        return x;
+    public double reportX() {
+        return positionX;
     }
 
-    public double getY() {
-        return y;
+    public double reportY() {
+        return positionY;
     }
 
-    public double getZ() {
-        return z;
+    public double reportZ() {
+        return positionZ;
     }
 
+    @Override
     public void fly() {
-        z++;
+        positionZ++;
     }
 }
