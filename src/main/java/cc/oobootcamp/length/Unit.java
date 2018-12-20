@@ -9,8 +9,7 @@ public enum Unit {
         this.factor = factor;
     }
 
-    public double rateByTarget(Unit unit){
-        return factor/unit.factor;
+    public double toMeter() {
+        return factor / M.factor;
     }
-
 }

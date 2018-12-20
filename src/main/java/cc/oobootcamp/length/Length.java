@@ -13,8 +13,9 @@ public class Length implements Comparable<Length> {
     }
 
     public int compareTo(Length target) {
-        double targetLength = target.unit.rateByTarget(this.unit) * target.amount;
-        if (amount == targetLength) {
+        double sourceLength = unit.toMeter() * amount;
+        double targetLength = target.unit.toMeter() * target.amount;
+        if (sourceLength == targetLength) {
             return 0;
         }
         return amount < targetLength ? -1 : 1;
