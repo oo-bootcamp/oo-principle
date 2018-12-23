@@ -1,30 +1,12 @@
 package cc.oobootcamp.shape;
 
 public abstract class Quads {
-    protected int width;
-    protected int height;
+    protected double width;
+    protected double height;
 
-    public Quads(int width, int height) {
-        if (width <= 0 || height <= 0) {
-            throw new IllegalArgumentException();
-        }
-        this.width = width;
-        this.height = height;
-    }
+    public abstract void setWidth(double width);
 
-    public int calculateArea() {
-        return width * height;
-    }
+    public abstract void setHeight(double width);
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public abstract void setWidth(int width);
-
-    public abstract void setHeight(int width);
+    public double calculateArea() { return width * height; }
 }

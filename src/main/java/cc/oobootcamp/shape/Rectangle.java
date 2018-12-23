@@ -1,18 +1,12 @@
 package cc.oobootcamp.shape;
 
-public class Rectangle extends Quads {
-    public Rectangle(int width, int height) {
-        super(width, height);
-    }
+public class Rectangle extends Quads{
+    protected double width;
+    protected double height;
 
-    @Override
-    public void setWidth(int width) {
-        this.width = width;
-    }
+    public void setWidth(double width) { this.width = width; }
 
-    @Override
-    public void setHeight(int height) {
-        this.height = height;
-    }
+    public void setHeight(double height) { this.height = height; }
 
+    public double calculateArea() { return width * height; }
 }

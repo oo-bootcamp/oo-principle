@@ -1,19 +1,15 @@
 package cc.oobootcamp.shape;
 
 public class Square extends Quads {
-    public Square(int side) {
-        super(side, side);
-    }
-
     @Override
-    public void setWidth(int width) {
-        this.width = width;
-        this.height = width;
-    }
-
-    @Override
-    public void setHeight(int height) {
-        this.width = height;
+    public void setHeight(double height) {
         this.height = height;
+        this.width = height;
+    }
+
+    @Override
+    public void setWidth(double width) {
+        this.height = width;
+        this.width = width;
     }
 }
