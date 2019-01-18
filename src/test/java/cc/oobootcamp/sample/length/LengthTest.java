@@ -1,4 +1,4 @@
-package cc.oobootcamp.length;
+package cc.oobootcamp.sample.length;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package cc.oobootcamp.length;
+package cc.oobootcamp.sample.length;
 
 public enum Unit {
     CM(1), M(100), KM(100000), DM(10), MM(0.1);

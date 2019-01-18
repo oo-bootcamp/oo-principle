@@ -1,6 +1,6 @@
-package cc.oobootcamp.shape;
+package cc.oobootcamp.principle.lsp;
 
-public class Rectangle extends Quads{
+public class Rectangle{
     protected double width;
     protected double height;
 

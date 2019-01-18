@@ -1,4 +1,4 @@
-package cc.oobootcamp.length;
+package cc.oobootcamp.sample.length;
 
 public class Length implements Comparable<Length> {
     private final int amount;

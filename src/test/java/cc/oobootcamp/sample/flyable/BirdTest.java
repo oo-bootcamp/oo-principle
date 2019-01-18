@@ -1,4 +1,4 @@
-package cc.oobootcamp.flyable;
+package cc.oobootcamp.sample.flyable;
 
 import org.junit.jupiter.api.Test;
 

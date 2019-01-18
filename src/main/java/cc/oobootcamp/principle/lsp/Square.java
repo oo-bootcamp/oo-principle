@@ -1,6 +1,6 @@
-package cc.oobootcamp.shape;
+package cc.oobootcamp.principle.lsp;
 
-public class Square extends Quads {
+public class Square extends Rectangle {
     @Override
     public void setHeight(double height) {
         this.height = height;

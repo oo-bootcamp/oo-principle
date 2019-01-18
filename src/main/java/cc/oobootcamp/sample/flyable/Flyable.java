@@ -1,4 +1,4 @@
-package cc.oobootcamp.flyable;
+package cc.oobootcamp.sample.flyable;
 
 public interface Flyable {
     void fly();
