@@ -9,7 +9,7 @@ public class Client {
         items.add(new Item("iPhone XS", 7499.0));
         items.add(new Item("iPhone XM MAX", 8599.0));
 
-        OrderReceiptHandler orderReceiptHandler = new OrderReceiptHandler(items);
+        OrderReceiptHandler orderReceiptHandler = new OrderReceiptHandler(items, PrinterType.PLAINT);
 
         orderReceiptHandler.printReceipt();
     }

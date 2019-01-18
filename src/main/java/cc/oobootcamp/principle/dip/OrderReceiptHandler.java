@@ -2,27 +2,24 @@ package cc.oobootcamp.principle.dip;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class OrderReceiptHandler {
-    private static final Logger LOGGER = Logger.getLogger(OrderReceiptHandler.class.getName());
-
     private List<Item> items = new ArrayList<>();
 
-    public OrderReceiptHandler(List<Item> items) {
+    private PrinterType printerType;
+
+    private PlaintPrinter plaintPrinter = new PlaintPrinter();
+
+
+    public OrderReceiptHandler(List<Item> items, PrinterType printerType) {
+        this.printerType = printerType;
         this.items.addAll(items);
     }
 
     public void printReceipt() {
-        StringBuilder result = new StringBuilder();
-
-        result.append("----------Order Detail---------\n");
-        for (Item item : items) {
-            result.append(item.getName()).append("::").append(item.getPrice()).append("\n");
+        if (printerType == PrinterType.PLAINT) {
+            plaintPrinter.print(items, calculateTotalPrice());
         }
-        result.append("Total Price is ").append(calculateTotalPrice());
-
-        LOGGER.info(result.toString());
     }
 
     private double calculateTotalPrice() {
