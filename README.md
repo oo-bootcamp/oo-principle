@@ -62,7 +62,7 @@
 开发组设计了一个interface `HumanAble`，包含了上述5个方法，并在`BabyClient`类中描述了使用方式。
 
 ##### 需求2：客户为了细分市场，需要对30岁的成年人做记录，需要具备如下行为：吃饭、喝水、打盹、汇报、工作
-请你基于之前的设计进行修改或扩展，完成客户的新需求，并在`AdultClient`描述使用方法。
+请你基于之前的设计进行修改或扩展，完成客户的新需求，并在`AdultClient`类中描述使用方式。
 
 
 #### DIP: Dependency Inversion Principle
