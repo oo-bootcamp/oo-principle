@@ -19,6 +19,6 @@ class RectangleTest {
         Rectangle quads = new Square();
         quads.setHeight(3);
         quads.setWidth(5);
-        assertThat(quads.calculateArea()).isEqualTo(15);
+        assertThat(quads.calculateArea()).isEqualTo(25);
     }
 }
