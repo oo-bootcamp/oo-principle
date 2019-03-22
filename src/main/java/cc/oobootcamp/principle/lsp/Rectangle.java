@@ -8,5 +8,10 @@ public class Rectangle{
 
     public void setHeight(double height) { this.height = height; }
 
-    public double calculateArea() { return width * height; }
+    public double calculateArea() {
+        if (width <= 0 || height <= 0) {
+            throw new IllegalArgumentException();
+        }
+        return width * height;
+    }
 }
