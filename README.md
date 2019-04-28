@@ -67,7 +67,7 @@
 
 #### DIP: Dependency Inversion Principle
 ##### 需求1：客户需要一个账单结算程序，改程序能够把商品条目进行普通格式化，并通过普通打印器打印出来。
-开发组已经设计了`Item`和`OrderReceiptHandler`类，并且在`OrderReceiptHandler`中使用了使用了普通格式的打印器`PlaintPrinter`进行打印
+开发组已经设计了`Item`和`OrderReceiptHandler`类，并且在`OrderReceiptHandler`中使用了普通格式的打印器`PlaintPrinter`进行打印
 
 ##### 需求2：客户收到顾客的反馈，账单格式化需要XML形式
 请你设计一个新的XML打印器来满足客户需求，你可以基于原来的程序进行修改或扩展。
