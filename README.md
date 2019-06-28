@@ -25,7 +25,7 @@
 2. 有一只企鹅，它也能飞，每飞行一次，它会向前进一米。
 
 
-## SOLID
+## 设计模式[SOLID](https://blog.csdn.net/Eastmount/article/details/41575053)
 - S：Single Responsibility Principle
 - O：Open/Close Principle
 - L：Liskov Substitution Principle
