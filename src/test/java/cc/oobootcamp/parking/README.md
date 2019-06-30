@@ -1,34 +1,39 @@
-park 停车场
+parks 多个停车场
 car 车
-park is filled 停满
 ticket 票
-parking 停车
+
+one park is filled 其中一个停满
+all park are filled 都停满
+parking 按顺序停车
 leaving 取车
+
 
 ## Tasking
 
 ### park
-**Given** a park with some lots
-**When** load car park into the system with the number of park lots
-**Then** get an correct sized empty park in system
+**Given** (ParkingPlatform管理的)有两个有空位的停车场
+**When** 停一辆车
+**Then** 成功停到第一个停车场, 返回停车票
 
+**Given** 有两个停车场, 第一个停满了
+**When** 停一辆车
+**Then** 成功停到第二个有空位的停车场, 返回停车票
 
+**Given** 有两个没有空位的停车场
+**When** 停一辆车
+**Then** 得到"没有空位, 停车失败"的信息
 
-### parking 停车
-**Given** parking lot is available
-**When** parking a car
-**Then** get ticket
+### pick
+**Given** 有两个停车场和已停好的车
+**When** 使用有效的停车票取一辆车
+**Then** 成功取到对应的车
 
-**Given** a parking is filled
-**When** parking a car
-**Then** tell user parking is filled
+**Given** 有两个停车场和已停好的车
+**When** 使用无效的停车票取一辆车
+**Then** 得到"车票无效, 取车失败"的信息
 
-### leaving 取车
-**Given** a ticket of the park
-**When** pick up the car with the ticket
-**Then** get the car matches to the ticket
-
-**Given** an invalid ticket
-**When** pick up the car with the ticket
-**Then** tell user ticket is invalid
+### pick then park
+**Given** 有两个停车场, 第一个停满了, 取走第一个停车场的车
+**When** 停一辆车
+**Then** 成功停到第一个停车场, 返回停车票
 

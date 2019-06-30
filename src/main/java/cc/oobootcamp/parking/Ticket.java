@@ -1,16 +1,13 @@
 package cc.oobootcamp.parking;
 
-import java.util.UUID;
-
 public class Ticket {
 
-  private UUID carPlateNumber;
+  private Car car;
 
-  public Ticket(UUID plateNumber) {
-    carPlateNumber = plateNumber;
+  public Ticket() {
   }
 
-  public UUID getCarPlateNumber() {
-    return carPlateNumber;
+  public Ticket(Car car) {
+    this.car = car;
   }
 }
