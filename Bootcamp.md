@@ -14,3 +14,15 @@
 review home work
 Tasking+TDD
 - 完成Parking
+
+## L2
+回顾作业
+- 尽量不要引入业务之外的概念
+- 不要为测试添加接口
+- 不要测试tasking未出现的概念
+- 聚焦当前task
+- 以终assertion为开始
+
+Task -> 业务 (问题域)
+Test -> 聚焦 (统一语言)
+Implementation -> 最小实现? (解决方案)

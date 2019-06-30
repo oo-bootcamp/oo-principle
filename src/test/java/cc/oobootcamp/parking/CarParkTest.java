@@ -53,4 +53,18 @@ public class CarParkTest {
         .isInstanceOf(NoSuchElementException.class)
         .hasMessage("Your ticket is invalid, cannot find your car in our park.");
   }
+
+  @Test
+  public void should_get_cannot_pick_message_when_pick_up_the_car_given_the_ticket_IS_already_used() {
+    CarPark carPark = new CarPark(5);
+    Car car = new Car();
+    Ticket ticket = carPark.parking(car);
+
+    Car result = carPark.pickUp(ticket);
+    assertThat(result).isEqualTo(car);
+
+    assertThatThrownBy(() -> carPark.pickUp(ticket))
+        .isInstanceOf(NoSuchElementException.class)
+        .hasMessage("Your ticket is invalid, cannot find your car in our park.");
+  }
 }

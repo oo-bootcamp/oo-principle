@@ -34,7 +34,7 @@ public class CarPark {
   public Car pickUp(Ticket ticket) {
     UUID carPlateNumber = ticket.getCarPlateNumber();
     if (lots.containsKey(carPlateNumber)) {
-      return lots.get(carPlateNumber);
+      return lots.remove(carPlateNumber);
     }
     throw new NoSuchElementException("Your ticket is invalid, cannot find your car in our park.");
   }
