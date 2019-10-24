@@ -79,5 +79,5 @@
 
 
 ## 参考资料
-- [JUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
+- [JUnit 5用户指南](https://sjyuan.club/junit5/user-guide-cn/)
 - [Gradle 用户指南](https://docs.gradle.org/current/userguide/userguide.html)
